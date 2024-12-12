@@ -1,0 +1,29 @@
+{
+  "name": "withsecure",
+  "version": "1.0.0",
+  "description": "WithSecure Assignment",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "esm": "^3.2.25",
+    "mocha": "^11.0.1",
+    "mochawesome": "^7.1.3",
+    "supertest": "^7.0.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter mochawesome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LathikaMBH/WithSecure.git"
+  },
+  "author": "Lathika Herath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LathikaMBH/WithSecure/issues"
+  },
+  "homepage": "https://github.com/LathikaMBH/WithSecure#readme",
+  "type": "module"
+  
+}
