@@ -49,9 +49,11 @@ This command will execute the test suite and report the results.
 The test suite is organized into distinct sections that focus on specific API functionalities:
 
 1. GET /version:
+
 Validates that the endpoint returns the current version of the application.
 
 2. POST /:
+
 Tests the triangle type calculation for various scenarios, including:
 Valid triangle types (equilateral, isosceles, scalene)
 Invalid triangle types (violating triangle inequality)
@@ -59,11 +61,12 @@ Error handling for invalid input data
 Additional Considerations
 
 3. Test Data: 
-For efficient management of test data, consider using test data files or libraries.
-Asynchronous Testing: Utilize async/await or promises to handle asynchronous tasks within your tests.
-Error Handling: Implement robust error handling mechanisms to catch and report exceptions.
-Test Coverage: Leverage tools like Istanbul to measure test coverage and identify areas requiring improvement.
-Continuous Integration: Set up a CI/CD pipeline to automate testing and deployment processes.
+
+For efficient management of test data, consider using test data files.
+
+4. Test Coverage: These testcases covered happy scenarios and criticle test scenarios(edge cases)
+
+5. Continuous Integration: Set up a CI/CD pipeline to automate testing and deployment processes.
 
 By following these instructions and exploring the test cases, you can effectively test and maintain the Triangle Calculator API.
 
