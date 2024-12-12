@@ -17,6 +17,16 @@ describe('Validating GET End point', () => {
             expect(res.text).to.equal("0.0.2");
         });
     });
+
+    /**
+     * Test Scenario: Validate Get request with invalid url
+     */
+    it('Retrieve app version with incorrect url', async () => {
+        await request.get('/versions').then((res) => {
+            expect(res.statusCode).to.equal(418);
+            expect(res.text).to.equal("I'm a Teapot");
+        });
+    });
 });
 
 /*
@@ -168,7 +178,7 @@ describe('Test Scenarios: Some critical test data (edge cases)', () => {
     /**
      * Test Scenario: When side are with boundary value
      */
-    it.only('Verify the triangle with boundary side values', async () => {
+    it('Verify the triangle with boundary side values', async () => {
         await request.post('/').send(data["with boundary value"]).then((res) => {
             expect(res.statusCode).to.equal(200);
             expect(res.body.result).to.equal("This is versatile triangle");
