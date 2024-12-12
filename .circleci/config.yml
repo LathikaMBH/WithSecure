@@ -4,19 +4,7 @@ jobs:
   build:
     docker:
       - image: cimg/node:20.4.0
-      # Consider using a specific user for security
-      # user: your_build_user
     steps:
       - checkout
-      - cache:
-          keys:
-            - v1-dependencies-{{ checksum "package-lock.json" }}
-            - v1-dependencies-{{ checksum "yarn.lock" }}
-          paths:
-            - node_modules/
-      - run:
-        name: Install Dependencies
-        command: npm install
-      - run:
-        name: Run Tests
-        command: npm test --reporter mochawesome
+      - run: npm install
+      - run: npm test --reporter mochawesome
