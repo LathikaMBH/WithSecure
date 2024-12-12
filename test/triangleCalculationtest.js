@@ -11,7 +11,7 @@ describe('Validating GET End point', () => {
     /*
     Test scenarios: Validate GET request
     */
-    it.only('Retrieve app version with correct url', async () => {
+    it('Retrieve app version with correct url', async () => {
         await request.get('/version').then((res) => {
             expect(res.statusCode).to.equal(200);
             expect(res.text).to.equal("0.0.2");
@@ -160,6 +160,16 @@ describe('Test Scenarios: Some critical test data (edge cases)', () => {
      */
     it('Verify the triangle with one additional side', async () => {
         await request.post('/').send(data["with additional side"]).then((res) => {
+            expect(res.statusCode).to.equal(200);
+            expect(res.body.result).to.equal("This is versatile triangle");
+        });
+    });
+
+    /**
+     * Test Scenario: When side are with boundary value
+     */
+    it.only('Verify the triangle with boundary side values', async () => {
+        await request.post('/').send(data["with boundary value"]).then((res) => {
             expect(res.statusCode).to.equal(200);
             expect(res.body.result).to.equal("This is versatile triangle");
         });

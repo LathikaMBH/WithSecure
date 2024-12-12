@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-12-12T18:35:10.891Z",
-    "end": "2024-12-12T18:35:11.124Z",
-    "duration": 233,
+    "start": "2024-12-12T19:08:44.595Z",
+    "end": "2024-12-12T19:08:44.874Z",
+    "duration": 279,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "42d0fd18-286e-4b68-9c6e-73ad498579e4",
+      "uuid": "a69ca756-d065-4b4b-b951-52c562ee787c",
       "title": "",
       "fullFile": "F:\\Automation Projects\\WithSecure_Assignment\\WithSecure\\test\\triangleCalculationtest.js",
       "file": "\\test\\triangleCalculationtest.js",
@@ -27,40 +27,40 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8d98e164-6d63-4920-be5a-c291f628f725",
-          "title": "Validating GET End point",
+          "uuid": "ad0e3d3b-c45e-4247-868a-25e5482821aa",
+          "title": "Test Scenarios: Some critical test data (edge cases)",
           "fullFile": "F:\\Automation Projects\\WithSecure_Assignment\\WithSecure\\test\\triangleCalculationtest.js",
           "file": "\\test\\triangleCalculationtest.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Retrieve app version with correct url",
-              "fullTitle": "Validating GET End point Retrieve app version with correct url",
+              "title": "Verify the triangle with boundary side values",
+              "fullTitle": "Test Scenarios: Some critical test data (edge cases) Verify the triangle with boundary side values",
               "timedOut": false,
-              "duration": 200,
+              "duration": 242,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "await request.get('/version').then((res) => {\n    expect(res.statusCode).to.equal(200);\n    expect(res.text).to.equal(\"0.0.2\");\n});",
+              "code": "await request.post('/').send(data[\"with boundary value\"]).then((res) => {\n    expect(res.statusCode).to.equal(200);\n    expect(res.body.result).to.equal(\"This is versatile triangle\");\n});",
               "err": {},
-              "uuid": "af8d8e9a-8e7b-4d1e-9bbe-183f017c091a",
-              "parentUUID": "8d98e164-6d63-4920-be5a-c291f628f725",
+              "uuid": "8278cd25-4247-4c4c-a4e9-4f6014a6439f",
+              "parentUUID": "ad0e3d3b-c45e-4247-868a-25e5482821aa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "af8d8e9a-8e7b-4d1e-9bbe-183f017c091a"
+            "8278cd25-4247-4c4c-a4e9-4f6014a6439f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 200,
+          "duration": 242,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
