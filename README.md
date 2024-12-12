@@ -14,6 +14,8 @@ The test harness verifies the functionality of the API and ensures accurate tria
 
 [scope](https://drive.google.com/file/d/1m7pf0cIBIMhSqsLMWm_cGQkCPwvIdLPR/view)
 
+[triangle test logic](https://docs.google.com/spreadsheets/d/1s_8qKEn4ly83ID-0V9aLe6XziZMQNL0MbG0g0xm1YMs/edit?usp=sharing)
+
 ## Prerequisites
 
 Node.js and npm (Node Package Manager) installed on your system.
