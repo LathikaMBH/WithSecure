@@ -2,13 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      image: cimg/node:20.4.0
-    working_directory: ~/repo  
+      - image: cimg/node:20.4.0
+        user : root  
     steps:
       - checkout
-      - run:
-          name: Install Mocha Globally
-          command: npm install -g mocha
       - run:
           name: Install dependencies
           command: npm install
