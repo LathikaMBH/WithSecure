@@ -1,10 +1,17 @@
-version: 2.1
-
+version: 2
 jobs:
   build:
     docker:
       - image: cimg/node:20.4.0
+        user : root  
     steps:
       - checkout
-      - run: npm install
-      - run: npm test --reporter mochawesome
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Set execute permissions for binaries
+          command: chmod +x ./node_modules/.bin/*    
+      - run:
+          name: Run tests
+          command: npm test
