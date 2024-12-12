@@ -20,7 +20,7 @@ Installation
 
 Bash
 
-git clone https://github.com/your-username/triangle-calculator-test-harness.git
+git clone https://github.com/LathikaMBH/WithSecure.git
 
 2. Install Dependencies:
 
@@ -35,7 +35,7 @@ npm install
 
 Bash
 
-cd triangle-calculator-test-harness
+cd WithSecure
 
 Run Tests:
 

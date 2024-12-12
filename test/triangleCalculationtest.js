@@ -17,10 +17,13 @@ describe('Validating GET End point', () => {
             expect(res.text).to.equal("0.0.2");
         });
     });
+});
 
-    /*
-    Test scenario: Happy flows equilateral, isosceles, versatile
-    */
+/*
+Test scenario: Happy flows equilateral, isosceles, versatile
+*/
+describe('All valid shapes of a triangle', () => {
+
     it('Verify the equilateral triangle', async () => {
         await request.post('/').send(data["when a = b = c"]).then((res) => {
 
@@ -30,22 +33,24 @@ describe('Validating GET End point', () => {
     });
 
     it('Verify two equal side and one different[isosceles triangle]', async () => {
-        await request.post('/').send(data["when a = b =! c"]).then((res) => {
+        await request.post('/').send(data["when a = b != c"]).then((res) => {
             expect(res.statusCode).to.equal(201);
             expect(res.body.result).to.equal("This is isosceles triangle");
         });
     });
 
     it('Verify valid three sides are different', async () => {
-        await request.post('/').send(data["when a =! b =! c"]).then((res) => {
+        await request.post('/').send(data["when a != b != c"]).then((res) => {
             expect(res.statusCode).to.equal(200);
             expect(res.body.result).to.equal("This is versatile triangle");
         });
     });
+});
 
-    /**
-     * Test Scenarios: Sum of the two sides should be greater than 3rd side
-     */
+/**
+ * Test Scenarios: Sum of the two sides should be greater than 3rd side
+ */
+describe('Test Scenarios: Sum of two sides should be greter than 3rd side', () => {
 
     it('Verify Sum of two side should be greater than 3rd side[when a + b < c]', async () => {
         await request.post('/').send(data["when a + b < c"]).then((res) => {
@@ -67,7 +72,9 @@ describe('Validating GET End point', () => {
             expect(res.body.error).to.equal("Sum of any 2 sides should be greater than the 3rd");
         });
     });
+});
 
+describe('Test Scenarios: Some critical test data (edge cases)', () => {
     /**
      * Test Scenario: All sides are zero
      */
@@ -157,9 +164,6 @@ describe('Validating GET End point', () => {
             expect(res.body.result).to.equal("This is versatile triangle");
         });
     });
-
-
-
 });
 
 
