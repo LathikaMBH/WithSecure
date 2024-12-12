@@ -12,6 +12,8 @@ This repository contains a test harness implemented using JavaScript and leverag
 * SuperTest: A library for testing HTTP servers.
 The test harness verifies the functionality of the API and ensures accurate triangle type calculations.
 
+[scope](https://drive.google.com/file/d/1m7pf0cIBIMhSqsLMWm_cGQkCPwvIdLPR/view)
+
 ## Prerequisites
 
 Node.js and npm (Node Package Manager) installed on your system.

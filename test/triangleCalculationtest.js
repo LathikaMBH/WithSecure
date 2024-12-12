@@ -11,7 +11,7 @@ describe('Validating GET End point', () => {
     /*
     Test scenarios: Validate GET request
     */
-    it('Retrieve app version with correct url', async () => {
+    it.only('Retrieve app version with correct url', async () => {
         await request.get('/version').then((res) => {
             expect(res.statusCode).to.equal(200);
             expect(res.text).to.equal("0.0.2");

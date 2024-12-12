@@ -1,1 +1,0 @@
-export const baseUrl = 'http://qa-task-env-1.eba-gpid92d6.eu-west-1.elasticbeanstalk.com';
