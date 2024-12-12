@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      image: cimg/node:18-alpine
+      image: cimg/node:20.4.0
     steps:
       - checkout
       - run:
@@ -10,4 +10,4 @@ jobs:
           command: npm install
       - run:
           name: Run tests
-          command: npm test -- --dev
+          command: npm test
