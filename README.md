@@ -53,7 +53,7 @@ This command will execute the test suite and report the results.
 
 Navigate to mochawesome-reports and double click and open the mochawesome.html test results file
 
-[Sample Test Result]("https://drive.google.com/file/d/18jM0n4Ce9Jq8mBw-Uuy_hvmYy2dLDkbT/view?usp=sharing")
+[Sample Test Result](https://drive.google.com/file/d/18jM0n4Ce9Jq8mBw-Uuy_hvmYy2dLDkbT/view?usp=sharing)
 
 
 ## Test Structure
